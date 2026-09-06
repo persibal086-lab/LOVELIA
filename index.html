@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Karen ❤️</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f8f4ee;
+    font-family:Georgia, serif;
+}
+
+.contenedor{
+    text-align:center;
+    max-width:900px;
+    padding:40px;
+}
+
+h1{
+    color:#7a1f3d;
+    margin-bottom:30px;
+}
+
+.frase{
+    font-size:24px;
+    font-style:italic;
+    margin-bottom:35px;
+}
+
+button{
+    padding:15px 30px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    background:#7a1f3d;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#5e1730;
+}
+
+#video{
+    display:none;
+    margin-top:30px;
+}
+
+video{
+    width:100%;
+    max-width:700px;
+    border-radius:15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<h1>Si el Destino Tiene Nombre, Es el Tuyo</h1>
+
+<p class="frase">
+"No te quiero por quién eres, te quiero por quién soy cuando estoy contigo."
+</p>
+
+<button onclick="mostrarVideo()">
+❤️ Ver Video ❤️
+</button>
+
+<div id="video">
+    <video controls autoplay>
+        video.mp4
+        Tu navegador no soporta video.
+    </video>
+</div>
+
+</div>
+
+<script>
+function mostrarVideo(){
+    document.getElementById("video").style.display = "block";
+}
+</script>
+
+</body>
+</html>
