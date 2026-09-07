@@ -3,66 +3,83 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para Karen ❤️</title>
+<title>Si el Destino Tiene Nombre, Es el Tuyo</title>
 
 <style>
 body{
     margin:0;
-    height:100vh;
+    font-family:Georgia, serif;
+    background:linear-gradient(135deg,#fff0f3,#ffe6eb);
     display:flex;
     justify-content:center;
     align-items:center;
-    background:#f8f4ee;
-    font-family:Georgia, serif;
+    min-height:100vh;
 }
 
-.contenedor{
+.card{
+    background:white;
+    width:90%;
+    max-width:850px;
+    padding:50px;
+    border-radius:25px;
     text-align:center;
-    max-width:900px;
-    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
 h1{
-    color:#7a1f3d;
-    margin-bottom:30px;
+    color:#c2185b;
+    margin-bottom:25px;
 }
 
 .frase{
     font-size:24px;
     font-style:italic;
-    margin-bottom:35px;
+    color:#444;
+    margin-bottom:30px;
+}
+
+.texto{
+    font-size:20px;
+    color:#666;
+    margin-bottom:30px;
+    line-height:1.6;
+}
+
+.pregunta{
+    font-size:34px;
+    color:#c2185b;
+    margin-bottom:25px;
 }
 
 button{
-    padding:15px 30px;
-    font-size:18px;
     border:none;
-    border-radius:10px;
-    background:#7a1f3d;
+    background:#c2185b;
     color:white;
+    padding:12px 22px;
+    margin:8px;
+    border-radius:12px;
+    font-size:18px;
     cursor:pointer;
+    transition:0.3s;
 }
 
 button:hover{
-    background:#5e1730;
+    transform:scale(1.05);
+    background:#ad1457;
 }
 
-#video{
-    display:none;
+#resultado{
     margin-top:30px;
-}
-
-video{
-    width:100%;
-    max-width:700px;
-    border-radius:15px;
+    font-size:26px;
+    color:#c2185b;
+    font-weight:bold;
 }
 </style>
 </head>
 
 <body>
 
-<div class="contenedor">
+<div class="card">
 
 <h1>Si el Destino Tiene Nombre, Es el Tuyo</h1>
 
@@ -70,22 +87,28 @@ video{
 "No te quiero por quién eres, te quiero por quién soy cuando estoy contigo."
 </p>
 
-<button onclick="mostrarVideo()">
-❤️ Ver Video ❤️
-</button>
+<p class="texto">
+Karen, hay personas que pasan por nuestra vida y otras que se quedan en nuestros pensamientos.
+Tú lograste ambas cosas.
+</p>
 
-<div id="video">
-    <video controls autoplay>
-        video.mp4
-        Tu navegador no soporta video.
-    </video>
+<div class="pregunta">
+¿Quieres ser mi novia? ❤️
 </div>
+
+<button onclick="respuesta()">Sí</button>
+<button onclick="respuesta()">Shi</button>
+<button onclick="respuesta()">No</button>
+<button onclick="respuesta()">Tal vez</button>
+
+<div id="resultado"></div>
 
 </div>
 
 <script>
-function mostrarVideo(){
-    document.getElementById("video").style.display = "block";
+function respuesta(){
+ document.getElementById("resultado").innerHTML =
+ "💖 ¡Sabía que elegirías la opción correcta! 💖";
 }
 </script>
 
